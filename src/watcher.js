@@ -48,7 +48,7 @@ Watcher.prototype = {
         }
     },
 
-    get: function(key) {
+    get: function() {
         Dep.target = this;
         var value = this.getter.call(this.vm, this.vm);
         Dep.target = null;

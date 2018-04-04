@@ -35,7 +35,7 @@ Compile.prototype = {
             // 按元素节点方式编译
             if (me.isElementNode(node)) {
                 me.compile(node);
-            } else if (me.isTextNode(node) && node.childNodes.length) {
+            } else if (me.isTextNode(node) && reg.test(text)) {
                 me.compileText(node, RegExp.$1);
             }
             // 遍历编译子节点
